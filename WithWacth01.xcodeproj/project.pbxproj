@@ -22,6 +22,7 @@
 		E3FBB763255FEE3B007501C6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBB762255FEE3B007501C6 /* ComplicationController.swift */; };
 		E3FBB765255FEE3B007501C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3FBB764255FEE3B007501C6 /* Assets.xcassets */; };
 		E3FBB76A255FEE3B007501C6 /* WithWacthApp01.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E3FBB74B255FEE39007501C6 /* WithWacthApp01.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3FBB77725600393007501C6 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FBB77625600393007501C6 /* SessionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E3FBB764255FEE3B007501C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3FBB766255FEE3B007501C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3FBB767255FEE3B007501C6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E3FBB77625600393007501C6 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				E3FBB73D255FED99007501C6 /* Assets.xcassets */,
 				E3FBB73F255FED99007501C6 /* LaunchScreen.storyboard */,
 				E3FBB742255FED99007501C6 /* Info.plist */,
+				E3FBB77625600393007501C6 /* SessionHandler.swift */,
 			);
 			path = WithWacth01;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3FBB739255FED97007501C6 /* ViewController.swift in Sources */,
+				E3FBB77725600393007501C6 /* SessionHandler.swift in Sources */,
 				E3FBB735255FED97007501C6 /* AppDelegate.swift in Sources */,
 				E3FBB737255FED97007501C6 /* SceneDelegate.swift in Sources */,
 			);

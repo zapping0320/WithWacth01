@@ -27,6 +27,8 @@ class InterfaceController: WKInterfaceController {
             session.delegate = self
             session.activate()
         }
+        self.sendMessage.setText("" )
+        self.receivedMessageFromApp.setText("")
     }
     
     override func didDeactivate() {
@@ -43,14 +45,19 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func sendMessageToApp() {
         if isReachable() {
+            self.receivedMessageFromApp.setText("")
             session.sendMessage(["request" : "version"], replyHandler: { (response) in
                 //self.items.append("Reply: \(response)")
                 print("Reply: \(response)")
+                DispatchQueue.main.async {
+                    self.receivedMessageFromApp.setText("Reply: \(response)")
+                }
             }, errorHandler: { (error) in
                 print("Error sending message: %@", error)
             })
         } else {
             print("iPhone is not reachable!!")
+            self.receivedMessageFromApp.setText("iPhone is not reachable!!")
         }
     }
     
