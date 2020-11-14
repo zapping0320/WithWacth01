@@ -8,8 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    var connectivityHandler = SessionHandler.shared
+    
     @IBOutlet weak var messageTextField: UITextField!
-    @IBOutlet weak var receivedMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessageToWatch(_ sender: Any) {
+        let message = "Message \(self.messageTextField.text)"
+
+        connectivityHandler.sendMessage(msg: message)
     }
     
 }

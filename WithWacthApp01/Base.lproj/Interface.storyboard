@@ -11,7 +11,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WithWacthApp01" customModuleProvider="target">
                     <items>
-                        <textField width="1" alignment="left" text="Text" id="CVT-CP-caZ"/>
+                        <textField width="1" alignment="left" text="Text" id="CVT-CP-caZ">
+                            <connections>
+                                <action selector="textFieldAction:" destination="AgC-eL-Hgc" id="90V-NI-1dd"/>
+                            </connections>
+                        </textField>
                         <button width="1" alignment="left" title="SendToApp" id="Dnr-BV-F1f">
                             <connections>
                                 <action selector="sendMessageToApp" destination="AgC-eL-Hgc" id="FYL-cg-cZQ"/>

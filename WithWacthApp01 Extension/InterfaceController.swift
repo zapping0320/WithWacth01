@@ -14,6 +14,10 @@ class InterfaceController: WKInterfaceController {
 
     private var session = WCSession.default
     
+    private var currnetTextValue:String = ""
+    @IBAction func textFieldAction(_ value: NSString?) {
+        self.currnetTextValue = value as! String
+    }
     
     @IBOutlet weak var receivedMessageFromApp: WKInterfaceLabel!
     @IBOutlet weak var sendMessage: WKInterfaceTextField!
@@ -46,7 +50,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func sendMessageToApp() {
         if isReachable() {
             self.receivedMessageFromApp.setText("")
-            session.sendMessage(["request" : "version"], replyHandler: { (response) in
+            session.sendMessage(["request" : self.currnetTextValue], replyHandler: { (response) in
                 //self.items.append("Reply: \(response)")
                 print("Reply: \(response)")
                 DispatchQueue.main.async {
@@ -68,6 +72,16 @@ extension InterfaceController: WCSessionDelegate {
     // 4: Required stub for delegating session
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        // 1: We launch a sound and a vibration
+        WKInterfaceDevice.current().play(.notification)
+        // 2: Get message and append to list
+        guard let msg = message["msg"] as? String else { return }
+        DispatchQueue.main.async {
+            self.receivedMessageFromApp.setText("from app: \(msg) ")
+        }
     }
     
 }

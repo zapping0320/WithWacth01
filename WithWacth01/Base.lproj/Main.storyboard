@@ -28,39 +28,20 @@
                                     <action selector="sendMessageToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GeF-1z-AUI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received Message from Watch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFh-f5-Yvy">
-                                <rect key="frame" x="10" y="138" width="394" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHw-dB-WyO">
-                                <rect key="frame" x="10" y="169" width="394" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FFh-f5-Yvy" firstAttribute="top" secondItem="Kh1-55-zrA" secondAttribute="bottom" constant="10" id="34c-KH-5WL"/>
                             <constraint firstItem="iLi-8B-aFi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5E8-WK-ywm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kh1-55-zrA" secondAttribute="trailing" constant="10" id="JhW-Fg-bRO"/>
-                            <constraint firstItem="YHw-dB-WyO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MG0-c7-OE2"/>
                             <constraint firstItem="iLi-8B-aFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qa2-nm-Cqj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLi-8B-aFi" secondAttribute="trailing" constant="10" id="Ra9-pI-8m6"/>
                             <constraint firstItem="Kh1-55-zrA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="U4q-Sb-QUO"/>
                             <constraint firstItem="Kh1-55-zrA" firstAttribute="top" secondItem="iLi-8B-aFi" secondAttribute="bottom" constant="10" id="VEe-0G-W5h"/>
-                            <constraint firstItem="FFh-f5-Yvy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="i4R-Eq-os5"/>
-                            <constraint firstItem="YHw-dB-WyO" firstAttribute="top" secondItem="FFh-f5-Yvy" secondAttribute="bottom" constant="10" id="lNS-M6-ooP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFh-f5-Yvy" secondAttribute="trailing" constant="10" id="pA8-JS-Qqd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHw-dB-WyO" secondAttribute="trailing" constant="10" id="uIe-Wn-ATR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="messageTextField" destination="iLi-8B-aFi" id="QGk-Le-yNT"/>
-                        <outlet property="receivedMessage" destination="YHw-dB-WyO" id="2RN-s2-mNr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

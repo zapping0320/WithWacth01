@@ -23,6 +23,7 @@ class SessionHandler : NSObject, WCSessionDelegate {
         if isSuported() {
             session.delegate = self
             session.activate()
+           
         }
         
         print("isPaired?: \(session.isPaired), isWatchAppInstalled?: \(session.isWatchAppInstalled)")
@@ -68,6 +69,16 @@ class SessionHandler : NSObject, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         if message["request"] as? String == "version" {
             replyHandler(["version" : "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version")"])
+        }
+        else {
+            let msg = message["request"] as? String
+            replyHandler(["message" : "App sent same \(msg)"])
+        }
+    }
+    
+    func sendMessage(msg : String) {
+        self.session.sendMessage(["msg" : msg], replyHandler: nil) { (error) in
+            print("Error sending message: \(error)")
         }
     }
     
