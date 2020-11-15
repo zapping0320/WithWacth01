@@ -28,19 +28,36 @@
                                     <action selector="sendMessageToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GeF-1z-AUI"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fcL-q5-QYA">
+                                <rect key="frame" x="10" y="148" width="394" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzK-Pf-qwe">
+                                <rect key="frame" x="10" y="374" width="394" height="30"/>
+                                <state key="normal" title="set alarm"/>
+                                <connections>
+                                    <action selector="setAlarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1hx-ee-4zY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iLi-8B-aFi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5E8-WK-ywm"/>
+                            <constraint firstItem="XzK-Pf-qwe" firstAttribute="top" secondItem="fcL-q5-QYA" secondAttribute="bottom" constant="10" id="AYS-nk-w8H"/>
+                            <constraint firstItem="fcL-q5-QYA" firstAttribute="top" secondItem="Kh1-55-zrA" secondAttribute="bottom" constant="20" id="DbN-4f-Dku"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kh1-55-zrA" secondAttribute="trailing" constant="10" id="JhW-Fg-bRO"/>
                             <constraint firstItem="iLi-8B-aFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Qa2-nm-Cqj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iLi-8B-aFi" secondAttribute="trailing" constant="10" id="Ra9-pI-8m6"/>
                             <constraint firstItem="Kh1-55-zrA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="U4q-Sb-QUO"/>
                             <constraint firstItem="Kh1-55-zrA" firstAttribute="top" secondItem="iLi-8B-aFi" secondAttribute="bottom" constant="10" id="VEe-0G-W5h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XzK-Pf-qwe" secondAttribute="trailing" constant="10" id="eEc-HX-ZOr"/>
+                            <constraint firstAttribute="trailing" secondItem="fcL-q5-QYA" secondAttribute="trailing" constant="10" id="fVc-Bh-cxI"/>
+                            <constraint firstItem="XzK-Pf-qwe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="gOv-MA-onj"/>
+                            <constraint firstItem="fcL-q5-QYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yMi-j4-uCO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alarmPicker" destination="fcL-q5-QYA" id="031-pp-scy"/>
                         <outlet property="messageTextField" destination="iLi-8B-aFi" id="QGk-Le-yNT"/>
                     </connections>
                 </viewController>
